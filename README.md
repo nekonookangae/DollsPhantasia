@@ -2,7 +2,7 @@
 
 このリポジトリは、私がRuby on Railsで開発したポートフォリオ用のブログです。<br>
 Heroku上の https://dolls-phantasia.herokuapp.com/ (現在停止中)で実際に動いています。<br>
-なお、背景画像はフリーサイトのものを、LogoとProfileの東方キャラクターの画像については[幻想幽玄庵](http://gensoukyou.1000.tv/kiyaku.html)さんから素材をお借りしています。
+なお、背景画像はフリーサイトのものを、LogoとProfileの東方キャラクターの画像については[幻想幽玄庵](http://gensoukyou.1000.tv/index.html)さんから素材をお借りしています。
 
 ## バージョン
   | Gem               | version  |
