@@ -1,0 +1,33 @@
+<% if posts.present? %>
+  <% posts.each do |post| %>
+    <div class="py-4 mx-2 article-sub d-flex flex-row">
+      <!-- image:content = 5:7 -->
+      <div>
+        <%= link_to post_path(post.id) do %>
+          <%= image_tag post.image.to_s, class: "img-wrap article-img" %>
+        <% end %>
+      </div>
+      <div class=pl-4>
+        <p>
+          <%= link_to Category.find(post.category_id).name, category_path(post.category_id), class: "article-category #{category_to_tag(post.category_id)}" %>
+        </p>
+        <h3 class="article-headline">
+          <%= link_to truncate_text(post.title), post_path(post) %>
+        </h3>
+        <p class="article-text">
+          <%= truncate_text(post.content) %>
+        </p>
+        <span class="pr-3 text-muted article-date">
+          <i class="far fa-clock"></i>
+          <%= post.created_at.strftime('%Y/%m/%d') %>
+        </span>
+        <span class="text-muted article-date">
+          <i class="fas fa-history"></i>
+          <%= post.updated_at.strftime('%Y/%m/%d') %>
+        </span>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <p>まだ投稿がありません。</p>
+<% end %>

@@ -1,0 +1,88 @@
+
+<div id="sidebar" class="h-100">
+  <aside class="bg-cover h-100 text-center">
+    <div class="container">
+      <!-- Search -->
+      <section class="sidebar-section">
+        <div class="sidebar-headline">
+          <h3>Search</h3>
+        </div>
+        <%= search_form_for @q, url: posts_path do |f| %>
+          <div class="input-group pb-3">
+            <%= f.text_field :title_or_content_cont, class: "form-control", placeholder: "キーワードを入力.." %>
+            <%= button_tag type: 'submit', class: "btn btn-primary" do %>
+              <i class="fas fa-search"></i>
+            <% end %>
+          </div>
+        <% end %>
+      </section>
+      <!-- Recent -->
+      <section class="sidebar-section">
+        <div class="sidebar-headline">
+          <h3>Recent</h3>
+        </div>
+        <% if @recent_posts.present? %>
+          <ul>
+            <% @recent_posts.each do |post| %>
+              <li>
+                <article class="d-flex flex-column recent-article">
+                  <%= link_to post_path(post) do %>
+                    <%= image_tag post.image.to_s, class: "img-wrap recent-img", alt: "最近の記事" %>
+                    <h4 class="recent-headline">
+                      <%= truncate_text(post.title) %>
+                    </h4>
+                    <div class="text-muted article-date">
+                      <i class="far fa-clock"></i>
+                      <%= post.created_at.strftime('%Y/%m/%d') %>
+                    </div>
+                  <% end %>
+                </article>
+              </li>
+            <% end %>
+          </ul>
+        <% else %>
+          <p> まだ投稿がありません。</p>
+        <% end %>
+      </section>
+      <!-- Archive -->
+      <section class="sidebar-section">
+        <div class="sidebar-headline">
+          <h3>Archive</h3>
+        </div>
+        <ul>
+          <% @archive_counts.each do |yyyymm, count| %>
+            <li><%= link_to ymconv(yyyymm, count.to_s), archive_posts_path(yyyymm) %></li>
+          <% end %>
+        </ul>
+      </section>
+      <!-- Tweet -->
+      <section class="sidebar-section">
+        <div class="sidebar-headline">
+          <h3>Tweets</h3>
+        </div>
+        <div class="d-flex flex-column">
+          <div>
+            <!-- Twitter Timelineを挿入してください-->
+          </div>
+          <div>
+            <!-- Twitter Followボタンを挿入してください -->
+          </div>
+        </div>
+      </section>
+      <!-- Profile -->
+      <section class="sidebar-section">
+        <div class="sidebar-headline">
+          <h3>Profile</h3>
+        </div>
+        <div class="d-flex flex-column">
+          <div>
+            <%= image_tag "udonge.png", id: "profile-img", alt: "プロフィール画像" %>
+          </div>
+          <div id="profile-text" class="text-left">
+            これはプロフィールの本文です。<br>
+          </div>
+        </div>
+      </section>
+    </div>
+  </aside>
+</div>

@@ -1,0 +1,34 @@
+<% content_for :title do %>
+  <%= @post.title %>
+<% end %>
+
+<% content_for :body do %>
+  <!-- main post -->
+  <article class="p-2">
+    <%= link_to Category.find(@post.category_id).name, category_path(@post.category_id), class: "article-category #{category_to_tag(@post.category_id)}" %>
+    <span class="text-muted article-date px-3">
+      <i class="far fa-clock"></i>
+      <%= @post.created_at.strftime('%Y/%m/%d') %>
+    </span>
+    <span class="text-muted article-date">
+      <i class="fas fa-history"></i>
+      <%= @post.updated_at.strftime('%Y/%m/%d') %>
+    </span>
+    <h1 id="article-title"><%= @post.title %></h1>
+    <% if @post.image.present? %>
+      <%= image_tag @post.image.to_s, class: "img-fluid", alt: "メイン画像" %>
+    <% end %>
+    <div class="pt-5">
+      <%= @post.content.html_safe %>
+    </div>
+  </article>
+  <% if admin_user_signed_in? %>
+    <%= link_to 'Edit Post', edit_post_path(@post.id), class: "btn btn-info" %>
+    <%= link_to 'Delete Post', post_path(@post.id), class: "btn btn-danger", method: :delete, data: {confirm: "本当に削除しますか？"} %>
+  <% end %>
+  <!-- 同ジャンルの別記事 -->
+  <div id="related-headline">
+    <h2>合わせて読みたい</h2>
+  </div>
+  <%= render 'layouts/post_item', posts: @related_posts %>
+<% end %>

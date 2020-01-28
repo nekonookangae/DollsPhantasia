@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) + "| DollsPhantasia" : "DollsPhantasia" %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <!-- Font-awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+
+    <%= stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+    <main>
+      <div class="row m-0 jumbotron jumbotron-fluid">
+        <!-- contents -->
+        <div class="px-0 col-md-8 col-sm-12">
+          <div class="bg-cover h-100 py-4">
+            <div class="white container pb-3">
+              <p class="notice"><%= notice %></p>
+              <p class="alert"><%= alert %></p>
+              <%= yield :body %>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar -->
+        <div class="px-0 col-md-4 col-sm-12">
+          <%= render 'layouts/sidebar' %>
+        </div>
+      </div>
+    </main>
+    <%= render 'layouts/footer' %>
+  </body>
+</html>

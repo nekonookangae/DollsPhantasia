@@ -1,0 +1,14 @@
+
+<% content_for :body do %>
+  <!-- carousel -->
+  <%= render 'layouts/carousel' %>
+  <h1 class="py-3 headline text-center">記事一覧</h1>
+  <!-- List of Article -->
+  <%= render 'layouts/post_item', posts: @posts %>
+  <%= will_paginate(@posts, class:"pagination justify-content-center", renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+  <% if admin_user_signed_in? %>
+    <div class="pt-2">
+      <%= link_to 'New Post', new_post_path, class: "btn btn-primary"  %>
+    </div>
+  <% end %>
+<% end %>

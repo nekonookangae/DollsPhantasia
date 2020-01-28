@@ -1,0 +1,32 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- logo -->
+    <%= image_tag "alice.png", class: "brand-img d-inline-block align-top", alt: "ロゴ" %>
+    <%= link_to "DollsPhantasia", posts_path, class: "navbar-brand" %>
+    <!-- humberger_menu -->
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- link -->
+    <div id="navbar" class="collapse navbar-collapse">
+      <!-- fixed_width, justify_right -->
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/categories/1">Drawing</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/categories/2">Technology</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/categories/3">Baseball</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/categories/4">Others</a>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Home", posts_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

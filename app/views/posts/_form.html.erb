@@ -1,0 +1,31 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %><br>
+    <%= form.text_field :title %><br><br>
+  </div>
+  <div class="field">
+    <%= form.file_field :image %><br><br>
+  </div>
+  <div class="field">
+    <%= form.label :content %><br>
+    <%= form.text_area :content, 'data-provider': :summernote %><br><br>
+  </div>
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, Category.all, :id, :name %><br><br>
+  </div>
+  <div class="actions">
+    <%= form.submit nil, class: "btn btn-dark" %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<% content_for :title do %>
+  <%= @yyyymm[0, 4] + '年' + @yyyymm[4, 2] + '月の記事一覧' %>
+<% end %>
+
+
+<% content_for :body do %>
+  <!-- carousel -->
+  <%= render 'layouts/carousel' %>
+  <h1 class="py-3 headline text-center">
+    <%= @yyyymm[0, 4] + '年' + @yyyymm[4, 2] + '月の記事一覧' %>
+  </h1>
+  <!-- List of Article -->
+  <%= render 'layouts/post_item', posts: @archive_posts %>
+  <%= will_paginate(@archive_posts, class:"pagination justify-content-center", renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+<% end %>

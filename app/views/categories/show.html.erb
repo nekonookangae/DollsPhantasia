@@ -1,0 +1,12 @@
+<% content_for :title do %>
+  <%= @category.name %> Articles
+<% end %>
+
+<% content_for :body do %>
+  <h1 class="headline text-center py-3">
+    Category: <%= @category.name %>
+  </h1>
+  <!-- List of Article -->
+  <%= render 'layouts/post_item', posts: @posts %>
+  <%= will_paginate(@posts, class:"pagination justify-content-center", renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+<% end %>

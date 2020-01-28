@@ -1,0 +1,9 @@
+//= require rails-ujs
+//= require jquery3
+//= require popper
+//= require bootstrap
+//= require summernote/summernote-bs4.min
+//= require summernote-init
+//= require activestorage
+//= require turbolinks
+//= require active_admin/base
