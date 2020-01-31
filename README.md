@@ -2,7 +2,18 @@
 
 このリポジトリは、私がRuby on Railsで開発したポートフォリオ用のブログです。<br>
 Heroku上の https://dolls-phantasia.herokuapp.com/ (現在停止中)で実際に動いています。<br>
-なお、背景画像はフリーサイトのものを、LogoとProfileの東方キャラクターの画像については[幻想幽玄庵](http://gensoukyou.1000.tv/index.html)さんから素材をお借りしています。
+なお、背景画像はフリーサイトのものを、LogoとProfileの東方キャラクターの画像については[幻想幽玄庵](http://gensoukyou.1000.tv/index.html)さんから素材をお借りしています。<br>
+**なお、これらの素材をリポジトリに含める行為は再配布にあたると判断したため、元画像のDL先のリンクを以下に記します。**
+- alice.png, udonge.png
+  - http://gensoukyou.1000.tv/dl.html (妖々夢, 永夜抄)
+- brawn-wood.jpg
+  - https://www.pexels.com/photo/brown-wooden-floor-172292/
+- woodhouse.jpg
+ - https://pixabay.com/photos/log-cabin-cottage-house-home-1886620/
+- wood-side.jpg
+ - https://pxhere.com/en/photo/1030950
+- wood.jpg
+ - 不明
 
 ## バージョン
   | Gem               | version  |
