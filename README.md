@@ -9,11 +9,11 @@ Heroku上の https://dolls-phantasia.herokuapp.com/ (現在停止中)で実際�
 - brawn-wood.jpg
   - https://www.pexels.com/photo/brown-wooden-floor-172292/
 - woodhouse.jpg
- - https://pixabay.com/photos/log-cabin-cottage-house-home-1886620/
+  - https://pixabay.com/photos/log-cabin-cottage-house-home-1886620/
 - wood-side.jpg
- - https://pxhere.com/en/photo/1030950
+  - https://pxhere.com/en/photo/1030950
 - wood.jpg
- - 不明
+  - 不明
 
 ## バージョン
   | Gem               | version  |
