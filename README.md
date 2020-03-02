@@ -20,13 +20,13 @@ Heroku上の https://dolls-phantasia.herokuapp.com/ (現在停止中)で実際�
   - 不明
 
 ## バージョン
-  | Gem               | version  |
-  |:------------------|:---------|
-  | Ruby              | 2.7.0    |
-  | Rails             | 5.2.4.1  |
-  | Bootstrap         | 4.4.1    |
-  | Font-awesome-sass | 5.12.0   |
-  | Summernote-rails  | 0.8.12.0 |
+  | Gem               | version          |
+  |:------------------|:-----------------|
+  | Ruby              | == 2.7.0         |
+  | Rails             | 5.2.4 ~ 5.2.4.1  |
+  | Bootstrap         | ~> 4.4.1         |
+  | Font-awesome-sass | ~> 5.12.0        |
+  | Summernote-rails  | ~> 0.8.12.0      |
 
 ## インストール & 実行
 ```
