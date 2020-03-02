@@ -5,7 +5,7 @@
 
 
 このリポジトリは、私がRuby on Railsで開発したポートフォリオ用のブログです。<br>
-Heroku上の https://dolls-phantasia.herokuapp.com/ (現在停止中)で実際に動いています。<br>
+Heroku上の https://dolls-phantasia.herokuapp.com/ で実際に動いています。<br>
 なお、背景画像はフリーサイトのものを、LogoとProfileの東方キャラクターの画像については[幻想幽玄庵](http://gensoukyou.1000.tv/index.html)さんから素材をお借りしています。<br>
 **なお、これらの素材をリポジトリに含める行為は再配布にあたると判断したため、元画像のDL先のリンクを以下に記します。**
 - alice.png, udonge.png
