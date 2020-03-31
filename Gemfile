@@ -15,7 +15,7 @@ gem 'carrierwave'
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
 # Use ActiveAdmin
-gem 'activeadmin', '~> 2.6.1'
+gem 'activeadmin', '~> 2.7.0'
 gem 'devise'
 # Use SearchForm
 gem 'ransack'
