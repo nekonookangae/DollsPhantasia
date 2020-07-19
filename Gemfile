@@ -7,7 +7,7 @@ ruby '2.7.0'
 gem 'nokogiri', '>= 1.10.8'
 # Use Bootstrap & Font-awesome
 gem 'bootstrap', '~> 4.5.0'
-gem 'font-awesome-sass', '~> 5.12.0'
+gem 'font-awesome-sass', '~> 5.13.0'
 gem 'jquery-rails'
 # Use PostImage
 gem 'carrierwave'
