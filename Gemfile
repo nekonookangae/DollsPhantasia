@@ -6,7 +6,7 @@ ruby '2.7.0'
 # security update at Feb 26
 gem 'nokogiri', '>= 1.10.8'
 # Use Bootstrap & Font-awesome
-gem 'bootstrap', '~> 4.5.0'
+gem 'bootstrap', '~> 4.5.2'
 gem 'font-awesome-sass', '~> 5.13.0'
 gem 'jquery-rails'
 # Use PostImage
